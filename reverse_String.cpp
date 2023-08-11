@@ -8,18 +8,20 @@ int getLength(string s){
     }
     return i;
 }
+string reverseString(string s,int length){
+   int i=0;
+   int j = length - 1;
 
-void reverseString(string s,int length){
-   while(length >=0){
-    cout<<s[length];
-    length--;
+   while(i <= j){
+    swap(s[i++],s[j--]);
    }
+   return s;
 }
 
 int main(){
     string s;
     cin>>s;
    int length= getLength(s);
-   reverseString(s,length);
+  cout<< reverseString(s,length);
 
 }
